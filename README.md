@@ -5,7 +5,7 @@ This repository contains a self-contained pipeline to run A/B test simulations a
 ## Files
 
 - `README.md` - A user manual explaining how to use everything.
-- - `generate_synthetic_data.py` - Generates synthetic user-level data (CSV) with `baseline`, `spend_amount`, and `group` columns.
+- `generate_synthetic_data.py` - Generates synthetic user-level data (CSV) with `baseline`, `spend_amount`, and `group` columns.
 - `ab_test.py` - Main analysis script (optional sampling, winsorization, Welch's t-test, ANCOVA, figures, Markdown report).
 - `arguments_example.sh` - Example commands and a master command showing all CLI arguments.
 - `requirements.txt` - Python packages required.
