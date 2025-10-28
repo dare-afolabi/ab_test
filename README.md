@@ -5,7 +5,7 @@ This repository contains a self-contained pipeline to run A/B test simulations a
 ## Files
 
 - `README.md` - A user manual explaining how to use everything.
-- `generate_synthetic_data.py` - Generates synthetic user-level data (CSV) with `baseline`, `spend_amount`, and `group` columns.
+- `generate_synthetic_data.py` - Generates synthetic user-level data (CSV) with `user_id`, `baseline`, `spend_amount`, and `group` columns.
 - `ab_test.py` - Main analysis script (optional sampling, winsorization, Welch's t-test, ANCOVA, figures, Markdown report).
 - `arguments_example.sh` - Example commands and a master command showing all CLI arguments.
 - `requirements.txt` - Python packages required.
@@ -78,7 +78,7 @@ If you pass `--input db` the script will attempt to read from your Postgres data
 - `DB_NAME`
 - (optional) `DB_PORT` (defaults to 5432)
 
-Ensure your table has the necessary columns (or pass the right `--metric`, `--user_col`, and `--date_col`).
+Ensure your table has the necessary columns (or pass the right `--metric`, `--user_col`, `--date_col`, and `--group_col`).
 
 ## Notes & Best practices
 
@@ -92,9 +92,9 @@ pandoc results/ab_test_report.md -o results/ab_test_report.pdf
 ## Additional Recommendations for Use
 
 - **Testing**: Users should test the pipeline with the provided `generate_synthetic_data.py` to ensure compatibility with their environment before using real data.
-- **Environment Setup**: Follow the `README.md` instructions to set up a virtual environment and install dependencies to avoid conflicts.
+- **Environment Setup**: Follow the **Quick start** instructions to set up a virtual environment and install dependencies to avoid conflicts.
 - **Database Configuration**: If using database input, ensure environment variables (`DB_USER`, `DB_PASS`, `DB_HOST`, `DB_NAME`, and optionally `DB_PORT`) are set correctly.
-- **Report Conversion**: For PDF output, users will need Pandoc installed, as noted in `README.md`.
+- **Report Conversion**: For PDF output, users will need Pandoc installed, as noted in **Notes & Best practices**.
 - For reproducible runs, set `--random_seed`.
 
 ## Example workflow
