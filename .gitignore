@@ -1,0 +1,87 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# Virtual environments
+.env/
+.venv/
+venv/
+env/
+ENV/
+
+# Poetry cache (optional)
+.poetry/
+
+# Pytest cache
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# MyPy cache
+.mypy_cache/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.iml
+
+# Logs
+*.log
+logs/
+debug.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Report / output artifacts
+output/
+reports/
+*.html
+*.pdf
+*.json
+*.csv
+*.tsv
+
+# Docker
+*.dockerfile
+docker-compose.override.yml
+
+# Registry / experiment artifacts
+registry.sqlite
+mlruns/
+.dvc/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
